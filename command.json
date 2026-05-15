@@ -1,0 +1,10 @@
+[
+    {
+        "keywords": ["!привет", "!hi", "!hello"],
+        "replay": "Hello to you too"
+    },
+    {
+        "keywords": ["!ping", "!status"],
+        "replay": "Im here"
+    }
+]
