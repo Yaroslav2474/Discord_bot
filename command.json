@@ -2,9 +2,34 @@
     {
         "keywords": ["!привет", "!hi", "!hello"],
         "replay": "Hello to you too"
+
     },
     {
         "keywords": ["!ping", "!status"],
         "replay": "Im here"
+    },
+    {
+        "keywords": ["!ася", "asya"],
+        "replay": "Asya - best designer"
+    },
+    {
+        "keywords": ["геншин", "!геншин"],
+        "replay": "геншин - гавно ебаное"
+    },
+    {
+        "keywords": ["genshin", "!genshin"],
+        "replay": "genshin - gavno ebanoe"
+    },
+    {
+        "keywords": ["нет", "нит"],
+        "replay": "пидора ответ"
+    },
+    {
+        "keywords": ["баба валя", "бабка"],
+        "replay": "Че те???"
+    },
+    {
+        "keywords": ["!help", "!commands"],
+        "replay": "list for commands to me:\n\"!привет\" \"!hi\" \"!hello\"\n\"!ping\" \"!status\"\n\"!ася\" \"asya\"\n\"геншин\" \"!геншин\"\n\"genshin\" \"!genshin\"\n\"нет\" \"нит\"\n\"баба валя\" \"бабка\""
     }
 ]
