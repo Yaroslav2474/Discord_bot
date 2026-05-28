@@ -1,35 +1,18 @@
 [
     {
-        "keywords": ["!привет", "!hi", "!hello"],
-        "replay": "Hello to you too"
-
+        "keywords": ["привет баба валя", "привет бот"],
+        "replay": "Привет! \nСписок команд: \n1.Поднять настроение"
+    },
+    {
+        "keywords": ["hi baba valya", "hello baba valya", "hi bot", "hello bot"],
+        "replay": "Hi! \nList commands: \n1.Funy time"
     },
     {
         "keywords": ["!ping", "!status"],
         "replay": "Im here"
     },
     {
-        "keywords": ["!ася", "asya"],
-        "replay": "Asya - best designer"
-    },
-    {
-        "keywords": ["геншин", "!геншин"],
-        "replay": "геншин - гавно ебаное"
-    },
-    {
-        "keywords": ["genshin", "!genshin"],
-        "replay": "genshin - gavno ebanoe"
-    },
-    {
-        "keywords": ["нет", "нит"],
-        "replay": "пидора ответ"
-    },
-    {
-        "keywords": ["баба валя", "бабка"],
-        "replay": "Че те???"
-    },
-    {
         "keywords": ["!help", "!commands"],
-        "replay": "list for commands to me:\n\"!привет\" \"!hi\" \"!hello\"\n\"!ping\" \"!status\"\n\"!ася\" \"asya\"\n\"геншин\" \"!геншин\"\n\"genshin\" \"!genshin\"\n\"нет\" \"нит\"\n\"баба валя\" \"бабка\""
+        "replay": "list for commands to me:\n•Funy commands: \n\t—→ \"Матвей\" \n\t—→\"хуй\" \n•Status commands: \n\t—→ \"!ping\" \n\t—→ \"!status\" \n•Main commands: \n\t—→ \"hi bot\" \n\t—→ \"привет бот\""
     }
 ]
