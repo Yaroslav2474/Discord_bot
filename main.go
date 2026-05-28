@@ -3,6 +3,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io"
+	"net/http"
 	"os"
 	"os/signal"
 	"strings"
@@ -11,6 +13,10 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
+type Structura struct {
+	First string `json:"message"`
+}
+
 type Command struct {
 	Keywords []string `json:"keywords"`
 	Replay   string   `json:"replay,omitempty"`
@@ -18,6 +24,40 @@ type Command struct {
 }
 
 var Rules []Command
+
+func request_to_API() (string, error) {
+	url := "https://dog.ceo/api/breeds/image/random"
+
+	resp, err := http.Get(url)
+
+	if err != nil {
+		fmt.Println("Error when sending the get request: ", err)
+		return "", fmt.Errorf("1")
+	}
+
+	defer resp.Body.Close()
+
+	body, err := io.ReadAll(resp.Body)
+
+	if err != nil {
+		fmt.Println("Error when read: ", err)
+		return "", fmt.Errorf("1")
+	}
+
+	var hz Structura
+
+	err = json.Unmarshal(body, &hz)
+
+	if err != nil {
+		fmt.Println("Error when unmarshaling: ", err)
+		return "", fmt.Errorf("1")
+	}
+
+	img := hz.First
+
+	return img, nil
+
+}
 
 func loadCommands(filename string) error {
 	bytes, err := os.ReadFile(filename)
@@ -42,6 +82,18 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 				fmt.Println("Error adding letter reaction: ", err)
 			}
 		}
+		return
+	}
+
+	if strings.Contains(userMessage, "funy time") || strings.Contains(userMessage, "поднять настроение") || strings.Contains(userMessage, "1") {
+		url_img, err := request_to_API()
+
+		if err != nil {
+			s.ChannelMessageSend(m.ChannelID, "Failed to execute the function :(")
+			return
+		}
+
+		s.ChannelMessageSend(m.ChannelID, url_img)
 		return
 	}
 
