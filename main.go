@@ -97,7 +97,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 		return
 	}
 
-	if strings.Contains(userMessage, "матвей") {
+	if strings.Contains(userMessage, "андреич") {
 		imagePath := "matvey.png"
 
 		file, err := os.Open(imagePath)
