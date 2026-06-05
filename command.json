@@ -1,11 +1,11 @@
 [
     {
         "keywords": ["привет баба валя", "привет бот"],
-        "replay": "Привет! \nСписок команд: \n1.Поднять настроение"
+        "replay": "Привет! Список команд: \n\t1. Поднять настроение\n\t2. Показать профиль"
     },
     {
         "keywords": ["hi baba valya", "hello baba valya", "hi bot", "hello bot"],
-        "replay": "Hi! \nList commands: \n1.Funy time"
+        "replay": "Hi! List commands: \n\t1. Funny time\n\t2. Show profile"
     },
     {
         "keywords": ["!ping", "!status"],
@@ -13,6 +13,10 @@
     },
     {
         "keywords": ["!help", "!commands"],
-        "replay": "list for commands to me:\n•Funy commands: \n\t—→ \"Матвей\" \n\t—→\"хуй\" \n•Status commands: \n\t—→ \"!ping\" \n\t—→ \"!status\" \n•Main commands: \n\t—→ \"hi bot\" \n\t—→ \"привет бот\""
+        "replay": "Commands: Funny - Матвей, хуй. Status - !ping, !status. Profile - !level, !profile. Main - hi bot, привет бот"
+    },
+    {
+        "keywords": ["!level", "!profile", "!уровень", "!профиль"],
+        "replay": "Use !level or !profile to check your level and experience"
     }
 ]

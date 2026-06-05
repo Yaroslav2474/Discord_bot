@@ -1,3 +1,3 @@
-#executable files
 *.exe
-*.test
+*.out
+*.db
